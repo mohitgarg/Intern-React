@@ -17,31 +17,43 @@ const style = {
 class Menu extends React.Component {
   constructor () {
     super()
-    this.isGraph = this.isGraph.bind(this)
+    this.state = {
+      boolDisplayLine: true,
+      boolDisplayBar: false
+    }
   }
 
-  isGraph () {
-    console.log(this._button)
-  }
   render () {
     return (
       <div>
         <div>
           <div>
             <button
-              ref={button => {
-                this._button = button
+              onClick={() => {
+                this.setState({
+                  boolDisplayLine: true,
+                  boolDisplayBar: false
+                })
               }}
-              onClick={this.isGraph}
             >
               Generate Line Graph
             </button>
           </div>
-          <div><button>Generate Bar Graph</button></div>
+          <div>
+            <button
+              onClick={() => {
+                this.setState({
+                  boolDisplayLine: false,
+                  boolDisplayBar: true
+                })
+              }}
+            >
+              Generate Bar Graph
+            </button>
+          </div>
         </div>
         <Image />
-        <Line />
-        <Bar />
+        {this.state.boolDisplayLine ? <Line /> : <Bar />}
       </div>
     )
   }
