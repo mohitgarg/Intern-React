@@ -13,7 +13,7 @@ class Image extends React.Component {
   }
   render () {
     return (
-      <div id='main'>
+      <div id='main' style={{ marginBottom: '50' }}>
         <div id='big-image'>
           <img
             src={this.state.image}

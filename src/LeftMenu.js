@@ -7,12 +7,13 @@ import Image from './Thumbnails'
 const style = {
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: 'yellow',
-  width: '150',
-  marginTop: '100'
-  // justifyContent: 'center',
+  listStyle: 'none',
+  // backgroundColor: 'yellow',
+  // marginTop: '100'
+  justifyContent: 'center',
   // alignItems: 'center',
   // margin: 'auto'
+  height: '700'
 }
 class Menu extends React.Component {
   constructor () {
@@ -25,11 +26,11 @@ class Menu extends React.Component {
 
   render () {
     return (
-      <div>
-        <div>
-          <div>
+      <div id='main' style={{ display: 'flex' }}>
+        <ul style={style}>
+          <li style={{ marginBottom: '10' }}>
             <button
-              className='btn btn-success'
+              className='btn btn-primary btn-sm'
               onClick={() => {
                 this.setState({
                   boolDisplayLine: true,
@@ -39,10 +40,10 @@ class Menu extends React.Component {
             >
               Generate Line Graph
             </button>
-          </div>
-          <div>
+          </li>
+          <li>
             <button
-              className='btn btn-success'
+              className='btn btn-primary btn-sm'
               onClick={() => {
                 this.setState({
                   boolDisplayLine: false,
@@ -52,10 +53,18 @@ class Menu extends React.Component {
             >
               Generate Bar Graph
             </button>
-          </div>
+          </li>
+        </ul>
+        <div
+          style={{
+            justifyContent: 'space-between',
+            marginTop: '100',
+            marginLeft: '300'
+          }}
+        >
+          <Image />
+          {this.state.boolDisplayLine ? <Line /> : <Bar />}
         </div>
-        <Image />
-        {this.state.boolDisplayLine ? <Line /> : <Bar />}
       </div>
     )
   }
