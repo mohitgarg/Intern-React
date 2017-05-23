@@ -8,11 +8,7 @@ const style = {
   display: 'flex',
   flexDirection: 'column',
   listStyle: 'none',
-  // backgroundColor: 'yellow',
-  // marginTop: '100'
   justifyContent: 'center',
-  // alignItems: 'center',
-  // margin: 'auto'
   height: '700'
 }
 class Menu extends React.Component {

@@ -5,10 +5,10 @@ const arr = []
 
 data.data.map(item => arr.push(item.value))
 const chartData = {
-  labels: ['January', 'February', 'March', 'April', 'May'],
+  labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
   datasets: [
     {
-      label: 'My First dataset',
+      label: 'Temperature in Delhi',
       fill: false,
       backgroundColor: 'rgba(75,192,192,0.4)',
       borderColor: 'rgba(75,192,192,1)',

@@ -6,7 +6,7 @@ const arr = []
 data.data.map(item => arr.push(item.value))
 
 const chartData = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
   datasets: [
     {
       label: 'Temperature in Delhi',
