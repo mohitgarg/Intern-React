@@ -29,6 +29,7 @@ class Menu extends React.Component {
         <div>
           <div>
             <button
+              className='btn btn-success'
               onClick={() => {
                 this.setState({
                   boolDisplayLine: true,
@@ -41,6 +42,7 @@ class Menu extends React.Component {
           </div>
           <div>
             <button
+              className='btn btn-success'
               onClick={() => {
                 this.setState({
                   boolDisplayLine: false,

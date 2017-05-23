@@ -15,22 +15,29 @@ class Image extends React.Component {
     return (
       <div id='main'>
         <div id='big-image'>
-          <img src={this.state.image} alt='Current Display' />
+          <img
+            src={this.state.image}
+            alt='Current Display'
+            className='img - thumbnail'
+          />
         </div>
         <div className='small-images' style={{ display: 'flex' }}>
           <img
+            className='img - thumbnail'
             src='http://lorempixel.com/100/50/sports/1/'
             alt='Player'
             onClick={() =>
               this.showImage('http://lorempixel.com/400/200/sports/1/')}
           />
           <img
+            className='img - thumbnail'
             src='http://lorempixel.com/100/50/fashion/1/'
             alt='Cloths'
             onClick={() =>
               this.showImage('http://lorempixel.com/400/200/fashion/1/')}
           />
           <img
+            className='img - thumbnail'
             src='http://lorempixel.com/100/50/city/1/'
             alt='Temple'
             onClick={() =>
