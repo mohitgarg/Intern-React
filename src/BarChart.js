@@ -51,14 +51,12 @@ const style = {
   height: '500px'
 }
 
-class Bar extends React.Component {
-  render () {
-    return (
-      <div style={style}>
-        <RC2 data={chartData} options={chartOptions} type='bar' />
-      </div>
-    )
-  }
+const Bar = () => {
+  return (
+    <div style={style}>
+      <RC2 data={chartData} options={chartOptions} type='bar' />
+    </div>
+  )
 }
 
 export default Bar

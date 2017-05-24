@@ -22,7 +22,7 @@ class Menu extends React.Component {
 
   render () {
     return (
-      <div id='main' style={{ display: 'flex' }}>
+      <div id='main' style={{ display: 'flex' }} className='container'>
         <ul style={style}>
           <li style={{ marginBottom: '10' }}>
             <button

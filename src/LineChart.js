@@ -1,9 +1,10 @@
 import React from 'react'
 import RC2 from 'react-chartjs2'
 import data from './data.json'
-const arr = []
 
+const arr = []
 data.data.map(item => arr.push(item.value))
+
 const chartData = {
   labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
   datasets: [
@@ -47,14 +48,12 @@ const style = {
   height: '500px'
 }
 
-class Line extends React.Component {
-  render () {
-    return (
-      <div style={style}>
-        <RC2 data={chartData} options={chartOptions} type='line' />
-      </div>
-    )
-  }
+const Line = () => {
+  return (
+    <div style={style}>
+      <RC2 data={chartData} options={chartOptions} type='line' />
+    </div>
+  )
 }
 
 export default Line
